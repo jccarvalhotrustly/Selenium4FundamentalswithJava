@@ -1,4 +1,4 @@
-package uitest.m4;
+package helper;
 
 public class Demohelper {
 

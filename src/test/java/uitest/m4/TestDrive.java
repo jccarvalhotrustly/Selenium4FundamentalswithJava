@@ -1,21 +1,20 @@
 package uitest.m4;
 
+import helper.Demohelper;
+import helper.DriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.safari.SafariDriver;
-import org.openqa.selenium.safari.SafariOptions;
 import org.testng.annotations.Test;
+import static helper.Pages.ENV;
 
 public class TestDrive {
 
     @Test
     public void test(){
-//        SafariOptions options = new SafariOptions();
-//        WebDriver driver = new SafariDriver(options);
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://uat.trustly.one/merchant-demo/globex/");
-        Demohelper.pause();
+        WebDriver driver = DriverFactory.newDriver();
+        driver.get(ENV);
+        driver.findElement()
+                //Introducing webbriver 4
         driver.quit();
     }
 }
